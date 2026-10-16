@@ -1,1 +1,140 @@
-<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Mundo Cancel - Sistemas de aluminio y cristal. Cotiza en segundos con nuestro cotizador visual inteligente."> <title>Mundo Cancel | Sistemas de Aluminio y Cristal</title> <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Preload hero (ajusta la extensión a la que uses) --> <link rel="preload" as="image" href="assets/images/corredizo_real.webp"> <!-- Google Fonts --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- CSS --> <link rel="stylesheet" href="css/style.css"> </head> <body> <!-- HEADER --> <header class="header" id="header"> <div class="header-inner"> <a href="#" class="logo"> <div class="logo-icon">MC</div> <span>Mundo Cancel</span> </a> <nav> <ul class="nav-menu" id="navMenu"> <li><a href="#sistemas" class="nav-link">Sistemas</a></li> <li><a href="#cotizador" class="nav-link">Cotizador</a></li> <li><a href="http://wa.me/5213328008949" class="nav-link nav-cta" target="_blank" rel="noopener">WhatsApp</a></li> </ul> <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menú"> <span></span><span></span><span></span> </button> </nav> </div> </header> <!-- HERO --> <section class="hero" id="hero"> <div class="hero-bg" id="heroBg"></div> <div class="hero-content"> <div class="hero-badge">Sistemas Premium</div> <h1 class="hero-title">Aluminio y Cristal <span>de Alto Diseño</span></h1> <p class="hero-subtitle">Soluciones arquitectónicas en aluminio y cristal para espacios que inspiran. Explora, visualiza y cotiza en segundos.</p> <div class="hero-cta-group"> <a href="#cotizador" class="hero-cta">Cotizar Ahora</a> <a href="https://mundocalculador-indalum.netlify.app" class="hero-cta hero-cta-secondary" target="_blank" rel="noopener">Abrir Calculador</a> </div> </div> </section> <!-- SISTEMAS --> <section class="section" id="sistemas"> <div class="section-label">Explora</div> <h2 class="section-title">Nuestros Sistemas</h2> <p class="section-subtitle">Cada sistema está diseñado con precisión para ofrecer la máxima calidad y estética arquitectónica.</p> <div class="categories-grid" id="categoriesGrid"></div> </section> <!-- COTIZADOR --> <section class="cotizador-section" id="cotizador"> <div class="section-label">Cotiza en Segundos</div> <h2 class="section-title">Visualiza tu Sistema</h2> <p class="section-subtitle">Selecciona la categoría y ajusta las dimensiones. El croquis se actualiza en tiempo real.</p> <div class="cotizador-grid"> <div class="cotizador-controls"> <div class="slider-group"> <label class="slider-label">Categoría</label> </div> <div class="category-selector" id="categorySelector"></div> <div class="slider-group"> <label class="slider-label"> <span>Ancho</span> <span class="slider-value" id="widthValue">200 cm</span> </label> <input type="range" id="widthSlider" min="80" max="600" value="200" step="1"> </div> <div class="slider-group"> <label class="slider-label"> <span>Alto</span> <span class="slider-value" id="heightValue">220 cm</span> </label> <input type="range" id="heightSlider" min="80" max="400" value="220" step="1"> </div> <div class="area-display"> <div class="area-stat"> <div class="area-stat-value" id="areaValue">4.40</div> <div class="area-stat-label">m²</div> </div> <div class="area-stat"> <div class="area-stat-value" id="perimeterValue">8.40</div> <div class="area-stat-label">m lineales</div> </div> </div> </div> <div class="croquis-container" id="croquisContainer"> <svg id="croquisSvg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"></svg> <div class="special-case-message" id="specialCaseMessage"> <div class="special-case-icon">🧠</div> <div class="special-case-title">Este proyecto requiere al cerebro del equipo.</div> <p class="special-case-text">Los sistemas especiales y acoples necesitan una evaluación personalizada para ofrecer la mejor solución.</p> <a href="http://wa.me/5213328008949" class="special-case-btn" target="_blank" rel="noopener">💬 Consultar Cotizador Inteligente</a> </div> </div> </div> </section> <!-- COTIZADOR INTELIGENTE --> <section class="inteligente-section"> <div class="inteligente-content"> <div class="inteligente-badge">✨ IA + Expertos</div> <h2 class="inteligente-title">Cotizador Inteligente</h2> <p class="inteligente-subtitle">Para proyectos complejos que requieren asesoría especializada, cálculo avanzado y soluciones personalizadas.</p> <a href="http://wa.me/5213328008949" class="inteligente-btn" target="_blank" rel="noopener">Iniciar Cotización Inteligente</a> </div> </section> <!-- FOOTER --> <footer class="footer"> <p>&copy; 2026 Mundo Cancel. Todos los derechos reservados.</p> </footer> <!-- GSAP --> <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> <!-- App --> <script src="js/app.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mundo Cancel - Sistemas de aluminio y cristal. Cotiza en segundos con nuestro cotizador visual inteligente.">
+<title>Mundo Cancel | Sistemas de Aluminio y Cristal</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<!-- Preload hero (ajusta la extensión a la que uses) -->
+<link rel="preload" as="image" href="assets/images/corredizo_real.webp">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">MC</div>
+      <span>Mundo Cancel</span>
+    </a>
+    <nav>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#sistemas" class="nav-link">Sistemas</a></li>
+        <li><a href="#cotizador" class="nav-link">Cotizador</a></li>
+        <li><a href="http://wa.me/5213328008949" class="nav-link nav-cta" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Sistemas Premium</div>
+    <h1 class="hero-title">Aluminio y Cristal <span>de Alto Diseño</span></h1>
+    <p class="hero-subtitle">Soluciones arquitectónicas en aluminio y cristal para espacios que inspiran. Explora, visualiza y cotiza en segundos.</p>
+    <div class="hero-cta-group">
+      <a href="#cotizador" class="hero-cta">Cotizar Ahora</a>
+      <a href="https://mundocalculador-indalum.netlify.app" class="hero-cta hero-cta-secondary" target="_blank" rel="noopener">Abrir Calculador</a>
+    </div>
+  </div>
+</section>
+
+<!-- SISTEMAS -->
+<section class="section" id="sistemas">
+  <div class="section-label">Explora</div>
+  <h2 class="section-title">Nuestros Sistemas</h2>
+  <p class="section-subtitle">Cada sistema está diseñado con precisión para ofrecer la máxima calidad y estética arquitectónica.</p>
+  <div class="categories-grid" id="categoriesGrid"></div>
+</section>
+
+<!-- COTIZADOR -->
+<section class="cotizador-section" id="cotizador">
+  <div class="section-label">Cotiza en Segundos</div>
+  <h2 class="section-title">Visualiza tu Sistema</h2>
+  <p class="section-subtitle">Selecciona la categoría y ajusta las dimensiones. El croquis se actualiza en tiempo real.</p>
+
+  <div class="cotizador-grid">
+    <div class="cotizador-controls">
+      <div class="slider-group">
+        <label class="slider-label">Categoría</label>
+      </div>
+      <div class="category-selector" id="categorySelector"></div>
+
+      <div class="slider-group">
+        <label class="slider-label">
+          <span>Ancho</span>
+          <span class="slider-value" id="widthValue">200 cm</span>
+        </label>
+        <input type="range" id="widthSlider" min="80" max="600" value="200" step="1">
+      </div>
+
+      <div class="slider-group">
+        <label class="slider-label">
+          <span>Alto</span>
+          <span class="slider-value" id="heightValue">220 cm</span>
+        </label>
+        <input type="range" id="heightSlider" min="80" max="400" value="220" step="1">
+      </div>
+
+      <div class="area-display">
+        <div class="area-stat">
+          <div class="area-stat-value" id="areaValue">4.40</div>
+          <div class="area-stat-label">m²</div>
+        </div>
+        <div class="area-stat">
+          <div class="area-stat-value" id="perimeterValue">8.40</div>
+          <div class="area-stat-label">m lineales</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="croquis-container" id="croquisContainer">
+      <svg id="croquisSvg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="special-case-message" id="specialCaseMessage">
+        <div class="special-case-icon">🧠</div>
+        <div class="special-case-title">Este proyecto requiere al cerebro del equipo.</div>
+        <p class="special-case-text">Los sistemas especiales y acoples necesitan una evaluación personalizada para ofrecer la mejor solución.</p>
+        <a href="http://wa.me/5213328008949" class="special-case-btn" target="_blank" rel="noopener">💬 Consultar Cotizador Inteligente</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COTIZADOR INTELIGENTE -->
+<section class="inteligente-section">
+  <div class="inteligente-content">
+    <div class="inteligente-badge">✨ IA + Expertos</div>
+    <h2 class="inteligente-title">Cotizador Inteligente</h2>
+    <p class="inteligente-subtitle">Para proyectos complejos que requieren asesoría especializada, cálculo avanzado y soluciones personalizadas.</p>
+    <a href="http://wa.me/5213328008949" class="inteligente-btn" target="_blank" rel="noopener">Iniciar Cotización Inteligente</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 Mundo Cancel. Todos los derechos reservados.</p>
+</footer>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- App -->
+<script src="js/app.js"></script>
+</body>
+</html>
