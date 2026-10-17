@@ -1,29 +1,15 @@
 # Sistema
-
 .DS_Store
-
 Thumbs.db
-
 Editores
-
 .vscode/
-
 .idea/
-
 *.swp
-
 # Node (si lo usas)
-
 node_modules/
-
 npm-debug.log*
-
 # Backups
-
 _backup_tex/
-
 # Temporales
-
 *.tmp
-
 *.loq
